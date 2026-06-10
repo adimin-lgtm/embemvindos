@@ -1,1 +1,105 @@
+:root{
+  --sil-dark:#1a1a2e;--sil-dark-2:#16213e;
+  --sil-orange:#f7931e;--sil-orange-hover:#e8850a;
+  --sil-green:#25d366;--sil-green-hover:#1da851;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',system-ui,sans-serif;color:#333;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;height:auto;display:block}
+
+/* Header */
+.header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.header-top{display:flex;justify-content:flex-end;padding:5px 5%;background:rgba(0,0,0,.2)}
+.lang-selector a{color:#fff;font-size:12px;margin-left:10px;opacity:.8;transition:opacity .3s}
+.lang-selector a:hover{opacity:1}
+.lang-sep{color:#fff;opacity:.5;margin:0 4px}
+.header-main{display:flex;align-items:center;justify-content:space-between;padding:10px 5%}
+.logo{display:inline-flex;align-items:center}
+.logo img{height:48px;width:auto}
+.nav-menu{display:flex;gap:5px}
+.nav-menu>li{position:relative}
+.nav-menu>li>a{color:#fff;font-size:13px;font-weight:500;padding:10px 12px;display:block;cursor:pointer;transition:color .3s}
+.nav-menu>li>a:hover{color:var(--sil-orange)}
+.nav-menu li .dropdown{position:absolute;top:100%;left:0;background:#fff;min-width:200px;box-shadow:0 5px 20px rgba(0,0,0,.15);opacity:0;visibility:hidden;transform:translateY(10px);transition:all .3s;border-radius:5px;overflow:hidden;padding:0}
+.nav-menu li:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown li a{display:block;padding:10px 15px;color:#333;font-size:13px;border-bottom:1px solid #eee;transition:all .3s}
+.dropdown li a:hover{background:var(--sil-orange);color:#fff}
+.header-icons{display:flex;align-items:center;gap:15px}
+.social-icons{display:flex;gap:12px}
+.social-icons a{color:#fff;font-size:14px;opacity:.8;transition:all .3s;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.3);border-radius:50%}
+.social-icons a:hover{opacity:1;color:var(--sil-orange);border-color:var(--sil-orange)}
+.mobile-menu-btn{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+
+/* Hero */
+.hero-slider{margin-top:100px;background:#0a1a0a}
+.hero-slider img{width:100%;height:auto;display:block}
+
+/* CTA */
+.cta-section{text-align:center;padding:50px 5%;background:#fff}
+.cta-section h2{font-size:28px;color:#333;margin-bottom:10px;font-weight:500}
+.cta-buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:var(--sil-green);color:#fff;padding:15px 35px;border-radius:30px;font-size:16px;font-weight:500;transition:all .3s;box-shadow:0 4px 15px rgba(37,211,102,.4)}
+.btn-whatsapp:hover{background:var(--sil-green-hover);color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.5)}
+.btn-whatsapp i{font-size:22px}
+
+/* Banner */
+.banner-section{display:block;width:100%;background:#fff}
+.banner-section img{display:block;width:100%;height:auto}
+
+/* Orçamento */
+.orcamento-section{text-align:center;padding:60px 5%;background:#fff}
+.orcamento-section h2{font-size:28px;color:#333;margin-bottom:10px}
+.orcamento-section p{color:#666;margin-bottom:25px}
+.btn-orcamento{display:inline-flex;align-items:center;gap:10px;background:var(--sil-orange);color:#fff;padding:15px 35px;border-radius:30px;font-size:16px;font-weight:600;transition:all .3s;box-shadow:0 4px 15px rgba(247,147,30,.4)}
+.btn-orcamento:hover{background:var(--sil-orange-hover);color:#fff;transform:translateY(-2px)}
+.btn-orcamento i{font-size:22px}
+
+/* Features */
+.features-section{display:grid;grid-template-columns:repeat(5,1fr);background:#1a1a2e}
+.feature-card{position:relative;overflow:hidden;height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px;background-size:cover;background-position:center;transition:all .3s;cursor:pointer}
+.feature-card:hover{transform:scale(1.02);filter:brightness(1.15)}
+.feature-card .icon{width:60px;height:60px;margin-bottom:15px;display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--sil-orange);border:2px solid var(--sil-orange);border-radius:50%}
+.feature-card h3{font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:1px}
+
+/* Footer */
+.footer{background:#1a1a2e;color:#fff;padding:60px 5% 0}
+.footer-top{display:grid;grid-template-columns:1fr 1fr 2fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-section h4{font-size:16px;font-weight:600;margin-bottom:20px;color:#fff}
+.footer-section p{color:rgba(255,255,255,.7);font-size:14px;margin-bottom:8px}
+.footer-section a{color:rgba(255,255,255,.7);font-size:14px;display:block;margin-bottom:8px;transition:color .3s}
+.footer-section a:hover{color:var(--sil-orange)}
+.news-item{display:flex;gap:15px;margin-bottom:20px}
+.news-item .news-thumb{width:80px;height:80px;border-radius:5px;flex-shrink:0;background-size:cover;background-position:center}
+.news-item-content h5{font-size:15px;font-weight:500;margin-bottom:5px;color:#fff}
+.news-item-content p{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:5px}
+.news-item-content a{color:var(--sil-orange);font-size:13px}
+.footer-bottom{text-align:center;padding:25px 0;color:rgba(255,255,255,.5);font-size:13px}
+.footer-bottom a{color:var(--sil-orange)}
+
+/* Floating WhatsApp */
+.floating-whatsapp{position:fixed;right:20px;bottom:20px;z-index:1000;display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;padding:12px 18px;border-radius:999px;font-weight:600;box-shadow:0 6px 20px rgba(37,211,102,.45)}
+.floating-whatsapp:hover{background:#1ebe5d;color:#fff}
+.floating-whatsapp i{font-size:18px}
+
+@media (max-width:1024px){
+  .features-section{grid-template-columns:repeat(3,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .nav-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#1a1a2e;flex-direction:column;padding:20px}
+  .nav-menu.active{display:flex}
+  .nav-menu li .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;background:transparent}
+  .dropdown li a{color:#fff;border-bottom:1px solid rgba(255,255,255,.1)}
+  .mobile-menu-btn{display:block}
+  .header-icons .social-icons{display:none}
+  .hero-slider{margin-top:70px}
+  .features-section{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr}
+  .cta-section h2,.orcamento-section h2{font-size:22px}
+}
+@media (max-width:480px){
+  .features-section{grid-template-columns:1fr}
+}
 
